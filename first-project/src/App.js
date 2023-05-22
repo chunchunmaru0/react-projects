@@ -2,11 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+ 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
+          {/*is this a comment?*/}
+          { console.log('Test')}
+          This is a Test by Kale! <br/>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
