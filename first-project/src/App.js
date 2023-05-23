@@ -1,5 +1,6 @@
 import './App.css';
 import TestComp from './TestComp';
+import Forms from './forms';
 
 
 //can be written as class component or function components 
@@ -69,6 +70,8 @@ function App() {
       <div>Testing my other Component{`<Bike>`} with Props</div>
       <Bike color="red" />
       <TestComp/>
+      <Forms/>
+      <h1> </h1>
       </header>
 
     </div>

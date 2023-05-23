@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import List from './list';
 
 const TestComp = () => {
     const [color, setColor] = useState("red");
@@ -22,6 +23,7 @@ const TestComp = () => {
         onClick={() => setColor("green")}
       >Green</button>
       <br></br>
+      <List/>
         </div>
     );
 }
