@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import "./index.css";
 // stateless functional component
 // always return JSX
 
@@ -15,7 +15,11 @@ import ReactDOM from "react-dom";
 function Booklist() {
   return (
     // <> this is Fragment can also be written as React.Fragment
-    <section>
+    <section className='booklist'>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   );
@@ -35,9 +39,9 @@ const Image = () => (
     alt=''
   />
 );
-const Author = () => <h2> John Doe</h2>;
+const Author = () => <h4> George R R Martin</h4>;
 const Title = () => {
-  return <p>A Game of Thrones (A Song of Ice and Fire)</p>;
+  return <h3>A Game of Thrones (A Song of Ice and Fire)</h3>;
 };
 
 /*
