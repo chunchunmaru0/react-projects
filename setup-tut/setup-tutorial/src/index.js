@@ -39,7 +39,14 @@ const Image = () => (
     alt=''
   />
 );
-const Author = () => <h4> George R R Martin</h4>;
+const Author = () => (
+  <h4
+    style={{ color: "turquoise", fontSize: "0.75rem", letterSpacing: ".25rem" }}
+  >
+    {" "}
+    George R R Martin
+  </h4>
+);
 const Title = () => {
   return <h3>A Game of Thrones (A Song of Ice and Fire)</h3>;
 };
