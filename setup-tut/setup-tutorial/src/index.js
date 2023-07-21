@@ -8,8 +8,9 @@ import ReactDOM from "react-dom";
 // return single element
 // div /section / article or Fragment
 // user camelCase for HTML attribute
-//close every element
+// close every element
 // format
+// className instead of class
 
 function Greeting() {
   console.log("TYesdt");
@@ -24,11 +25,18 @@ function Greeting() {
           <a href='#a'>This is a Test</a>
         </li>
       </ul>
-
+      <Person />
+      <Message />
       <img src='' alt='' />
     </React.Fragment>
   );
 }
+
+const Person = () => <h2> John Doe</h2>;
+const Message = () => {
+  return <p> this is a message</p>;
+};
+
 /*
 // arrrow function is same as the above function
 
