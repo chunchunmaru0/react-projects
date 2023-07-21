@@ -12,29 +12,32 @@ import ReactDOM from "react-dom";
 // format
 // className instead of class
 
-function Greeting() {
-  console.log("TYesdt");
+function Booklist() {
   return (
     // <> this is Fragment can also be written as React.Fragment
-    <React.Fragment>
-      <div>
-        <h1>Hello World</h1>
-      </div>
-      <ul>
-        <li>
-          <a href='#a'>This is a Test</a>
-        </li>
-      </ul>
-      <Person />
-      <Message />
-      <img src='' alt='' />
-    </React.Fragment>
+    <section>
+      <Book />
+    </section>
   );
 }
-
-const Person = () => <h2> John Doe</h2>;
-const Message = () => {
-  return <p> this is a message</p>;
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
+  );
+};
+const Image = () => (
+  <img
+    src='https://m.media-amazon.com/images/I/51D+-f5UcDL._SY346_.jpg'
+    alt=''
+  />
+);
+const Author = () => <h2> John Doe</h2>;
+const Title = () => {
+  return <p>A Game of Thrones (A Song of Ice and Fire)</p>;
 };
 
 /*
@@ -48,4 +51,4 @@ const Greeting = () => {
   );
 };
 */
-ReactDOM.render(<Greeting />, document.getElementById("root"));
+ReactDOM.render(<Booklist />, document.getElementById("root"));
