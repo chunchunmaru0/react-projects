@@ -25,7 +25,10 @@ body{
 }
 
 .book{
-    background-color: antiquewhite;
+    background-color: darkslateblue;
     border-radius: 1rem;
     padding: 1rem 2rem;
+}
+.book img{
+    width: 15rem;
 }
