@@ -15,16 +15,19 @@ import "./index.css";
 //New Day
 const books = [
   {
+    id: 1,
     title: "A Game of Thrones (A Song of Ice and Fire)",
     author: "George R. R. Martin",
     img: "https://m.media-amazon.com/images/I/51D+-f5UcDL._SY346_.jpg",
   },
   {
+    id: 2,
     title: "Fire & Blood",
     author: "George R. R. Martin",
     img: "https://m.media-amazon.com/images/I/51+EyQja6PL.jpg",
   },
   {
+    id: 3,
     title: "The Rise of the Dragon",
     author: "George R. R. Martin",
     img: "https://m.media-amazon.com/images/I/51P8IotdA+L.jpg",
@@ -33,16 +36,16 @@ const books = [
 function Booklist() {
   return (
     <section className='booklist'>
-      {books.map((item) => {
+      {books.map((book) => {
         // const { img, title, author } = book;
         //if you do spread operator {...} then you dont need to make an object for it, just SPREAD it like a king
-        return <Book book={item}></Book>;
+        return <Book key={book.id} {...book}></Book>;
       })}
     </section>
   );
 }
 const Book = (props) => {
-  const { img, title, author } = props.book; // <img src = {img}/>
+  const { img, title, author } = props; // <img src = {img}/>
   //Object Destructuring
   return (
     <article className='book'>
