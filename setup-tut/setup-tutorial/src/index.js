@@ -11,6 +11,48 @@ import "./index.css";
 // close every element
 // format
 // className instead of class
+
+//New Day
+const books = [
+  {
+    title: "A Game of Thrones (A Song of Ice and Fire)",
+    author: "George R. R. Martin",
+    img: "https://m.media-amazon.com/images/I/51D+-f5UcDL._SY346_.jpg",
+  },
+  {
+    title: "Fire & Blood",
+    author: "George R. R. Martin",
+    img: "https://m.media-amazon.com/images/I/51+EyQja6PL.jpg",
+  },
+  {
+    title: "The Rise of the Dragon",
+    author: "George R. R. Martin",
+    img: "https://m.media-amazon.com/images/I/51P8IotdA+L.jpg",
+  },
+];
+function Booklist() {
+  return (
+    <section className='booklist'>
+      {books.map((item) => {
+        // const { img, title, author } = book;
+        //if you do spread operator {...} then you dont need to make an object for it, just SPREAD it like a king
+        return <Book book={item}></Book>;
+      })}
+    </section>
+  );
+}
+const Book = (props) => {
+  const { img, title, author } = props.book; // <img src = {img}/>
+  //Object Destructuring
+  return (
+    <article className='book'>
+      <img src={img} alt='' />
+      <h1>{title}</h1>
+      <h3>{author}</h3>
+    </article>
+  );
+};
+/*
 let gotBook = {
   title: "A Game of Thrones (A Song of Ice and Fire)",
   author: "George R. R. Martin",
@@ -25,14 +67,11 @@ function Booklist() {
   return (
     // <> this is Fragment can also be written as React.Fragment
     <section className='booklist'>
-      <Book img={gotBook.img} title={gotBook.title} author={gotBook.author}>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
-          numquam laboriosam tempore aspernatur? In, eligendi alias consequatur
-          est vitae perferendis rerum voluptate, fugiat cumque ex accusantium
-          corporis aperiam, at numquam!
-        </p>
-      </Book>
+      <Book
+        img={gotBook.img}
+        title={gotBook.title}
+        author={gotBook.author}
+      ></Book>
 
       <Book
         img={hotdBook.img}
@@ -50,10 +89,10 @@ const Book = (props) => {
       <img src={props.img} alt='' />
       <h1>{props.title}</h1>
       <h3>{props.author}</h3>
-      {props.children}
     </article>
   );
 };
+*/
 
 /*
 const title = "A Game of Thrones (A Song of Ice and Fire)";
